@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/essential'],
+  extends: ['plugin:vue/essential'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
