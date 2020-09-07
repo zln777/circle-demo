@@ -5,7 +5,17 @@ jobs:
       - image: circleci/node:10
     branches:
       only:
-        - master
+        - circleci-project-setup
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - '49:0a:ec:52:f3:ca:04:fe:51:32:39:50:54:c1:27:f2'
+      - checkout
       - run: echo "A first Hello"
       - run: npm -v
+      - run:
+        name: Install
+        command: yarn install
+      - run:
+        name: Build
+        command: yarn build
