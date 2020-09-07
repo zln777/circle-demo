@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
+    branches:
+      only:
+        - master
     steps:
       - run: echo "A first Hello"
       - run: npm -v
