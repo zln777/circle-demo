@@ -17,9 +17,9 @@ jobs:
           name: Install
           command: yarn install
       - save_cache:
-        path:
-          - node_modules
-        key: dependencies_zln
+          path:
+            - node_modules
+          key: dependencies_zln
       - run:
           name: Build
           command: yarn build
